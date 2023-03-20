@@ -88,8 +88,19 @@ dependencies {
    _interactiveWebview.sendOnReadyBack(new Gson().toJson(getUserOption(token, currrentChannelId)));
    ```
 
-   5.2 In the onKeyDown function listen to the key events returned from the webview and handle those events.
+   getUserOption(String token, String channelId): Object constructor to submit to the interactive server
 
+   ```
+   private SigmaWebView.UserOptions getUserOption(String token, String channelId) {
+       return new SigmaWebView.UserOptions(token, channelId,
+               "default-app", "", true, "ArrowLeft", true, "");
+   }
+   ```
+   
+   Where token and channelId are received from server.
+   
+   5.2 In the onKeyDown function listen to the key events returned from the webview and handle those events.
+   
    ```java
    
                  @Override
@@ -163,7 +174,7 @@ dependencies {
                    }
                }
    ```
-
+   
    5.3 The onReload function is called when the token expires, sending back json string data to the interactive sdk
    
    ```java
