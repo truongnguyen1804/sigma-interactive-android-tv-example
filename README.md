@@ -4,7 +4,7 @@
 
 ### I. Init SDK
 
-Add [sigma-interactive.aar](https://github.com/truongnguyen1804/sigma-interactive-android-tv-sdk-example/tree/main/libs)  file to libs folder.
+Add [sigma-interactive.aar](https://github.com/truongnguyen1804/sigma-interactive-android-tv-example/tree/main/libs)  file to libs folder.
 
 Add to app/build.gradle:
 
